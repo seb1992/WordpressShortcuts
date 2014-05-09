@@ -1,0 +1,99 @@
+{
+  "name": "WordpressShortcuts",
+  "version": "2",
+  "manifest_version": 2,
+  "description": "Use the Wordpress Shortcuts from Visual Mode also in Text Mode. Key Bindings can be configured in Settings Page.",
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "contents.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+    "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "commands": {
+        "bold" :
+        {
+            "suggested_key":
+            {
+              "default": "Alt+B",
+              "mac": "Command+B"
+            },
+            "description": "bold"
+        },
+
+        "h2":
+        {
+            "description": "2"
+        },
+
+        "h3":
+        {
+            "description": "3"
+        },
+
+        "h4":
+        {
+            "description": "4"
+        },
+
+        "link":
+        {
+            "suggested_key":
+            {
+              "default": "Alt+L",
+              "mac": "Alt+L"
+            },
+            "description": "link"
+        },
+
+        "block":
+        {
+            "description": "block"
+        },
+
+        "del":
+        {
+            "description": "del"
+        },
+
+        "img":
+        {
+            "description": "img"
+        },
+
+        "italic":
+        {
+            "suggested_key":
+            {
+              "mac": "Command+I"
+            },
+            "description": "italic"
+        },
+
+        "ul":
+        {
+            "description": "ul"
+        },
+
+        "ol":
+        {
+            "description": "ol"
+        },
+
+        "li":
+        {
+            "suggested_key":
+            {
+              "default": "Ctrl+L"
+            },
+            "description": "li"
+        }
+
+    }
+}
